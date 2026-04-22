@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmulas de Física · Formulário Completo</title>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams'
+      },
+      options: { enableMenu: false }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    :root {
+      --primary: #1a365d; --accent: #3182ce; --bg: #f7fafc;
+      --card: #ffffff; --text: #2d3748; --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6; max-width: 1100px; margin: 0 auto;
+      padding: 20px; background: var(--bg); color: var(--text);
+    }
+    header {
+      text-align: center; margin-bottom: 35px; padding: 25px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white; border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    header h1 { font-size: 2.3rem; margin-bottom: 8px; }
+    header p { opacity: 0.95; font-size: 1.05rem; }
+    h2 {
+      color: var(--primary); border-bottom: 3px solid var(--accent);
+      padding: 12px 0 8px; margin: 45px 0 20px; font-size: 1.6rem;
+    }
+    h3 { color: var(--accent); margin: 25px 0 12px; font-size: 1.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--card); padding: 18px; border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06); border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .card h4 { margin: 0 0 10px; color: var(--primary); font-weight: 600; font-size: 1.1rem; }
+    .formula { margin: 7px 0; font-size: 1.08rem; }
+    .formula.display { text-align: center; margin: 12px 0; }
+    .note { font-size: 0.9rem; color: #718096; margin-top: 6px; font-style: italic; }
+    .constants { background: #ebf8ff; padding: 10px; border-radius: 8px; margin: 8px 0; font-size: 0.95rem; }
+    footer { text-align: center; margin-top: 60px; padding: 25px; color: #718096; font-size: 0.95rem; }
+    @media (max-width: 650px) {
+      header h1 { font-size: 1.9rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📘 Formulário Completo de Física</h1>
+  <p>Ensino Médio & Superior · MathJax · Fonte: physics.info + conteúdo original</p>
+</header>
+
+<!-- MECÂNICA -->
+<h2>⚙️ Mecânica</h2>
+
+<h3>Cinemática</h3>
+<div class="grid">
+  <div class="card">
+    <h4>MRU & MRUV</h4>
+    <div class="formula">$v = \dfrac{\Delta s}{\Delta t}$ &nbsp;|&nbsp; $\vec{v} = \dfrac{d\vec{s}}{dt}$</div>
+    <div class="formula">$a = \dfrac{\Delta v}{\Delta t}$ &nbsp;|&nbsp; $\vec{a} = \dfrac{d\vec{v}}{dt}$</div>
+    <div class="formula">$v = v_0 + at$</div>
+    <div class="formula">$s = s_0 + v_0 t + \dfrac{1}{2}at^2$</div>
+    <div class="formula">$v^2 = v_0^2 + 2a(s - s_0)$</div>
+    <div class="formula">$v_m = \dfrac{v + v_0}{2}$</div>
+  </div>
+  <div class="card">
+    <h4>Lançamentos & Queda</h4>
+    <div class="formula">Vertical: $v = v_0 - gt$ &nbsp;|&nbsp; $H = v_0 t - \dfrac{gt^2}{2}$</div>
+    <div class="formula">Queda livre: $v = gt$ &nbsp;|&nbsp; $H = \dfrac{gt^2}{2}$ &nbsp;|&nbsp; $v^2 = 2gH$</div>
+    <div class="formula">Oblíquo: $v_{0x} = v_0\cos\theta$ &nbsp;|&nbsp; $v_{0y} = v_0\sin\theta$</div>
+    <div class="formula">Alcance: $A = v_{0x} \cdot T$ &nbsp;|&nbsp; $H_{max} = \dfrac{v_{0y}^2}{2g}$</div>
+    <div class="formula">Horizontal: $A = v_0 t$ &nbsp;|&nbsp; $v_y = gt$</div>
+  </div>
+</div>
+
+<h3>Dinâmica & Energia</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Leis de Newton & Forças</h4>
+    <div class="formula">2ª Lei: $\sum\vec{F} = m\vec{a} = \dfrac{d\vec{p}}{dt}$</div>
+    <div class="formula">Peso: $\vec{W} = m\vec{g}$</div>
+    <div class="formula">Atrito: $f_s \leq \mu_s N$ &nbsp;|&nbsp; $f_k = \mu_k N$</div>
+    <div class="formula">Hooke: $\vec{F} = -k\Delta\vec{x}$</div>
+    <div class="formula">Centrípeta: $a_c = \dfrac{v^2}{r} = \omega^2 r$</div>
+  </div>
+  <div class="card">
+    <h4>Trabalho, Energia & Potência</h4>
+    <div class="formula">$W = F\Delta s\cos\theta = \displaystyle\int \vec{F}\cdot d\vec{s}$</div>
+    <div class="formula">Teorema: $W = \Delta K = \dfrac{1}{2}mv^2 - \dfrac{1}{2}mv_0^2$</div>
+    <div class="formula">$K = \dfrac{1}{2}mv^2 = \dfrac{p^2}{2m}$</div>
+    <div class="formula">$U_g = mgh$ &nbsp;|&nbsp; $U_s = \dfrac{1}{2}kx^2$</div>
+    <div class="formula">$P = \dfrac{\Delta W}{\Delta t} = \vec{F}\cdot\vec{v}$</div>
+    <div class="formula">Eficiência: $\eta = \dfrac{W_{out}}{E_{in}}$</div>
+  </div>
+  <div class="card">
+    <h4>Momento, Impulso & Rotação</h4>
+    <div class="formula">Momento: $\vec{p} = m\vec{v}$ &nbsp;|&nbsp; $\vec{J} = \vec{F}\Delta t = \Delta\vec{p}$</div>
+    <div class="formula">Torque: $\tau = rF\sin\theta$ &nbsp;|&nbsp; $\vec{\tau} = \vec{r}\times\vec{F}$</div>
+    <div class="formula">2ª Lei rotacional: $\sum\vec{\tau} = I\vec{\alpha} = \dfrac{d\vec{L}}{dt}$</div>
+    <div class="formula">$I = \sum mr^2$ &nbsp;|&nbsp; $K_{rot} = \dfrac{1}{2}I\omega^2$</div>
+    <div class="formula">Momento angular: $\vec{L} = \vec{r}\times\vec{p} = I\vec{\omega}$</div>
+  </div>
+</div>
+
+<h3>Gravitação & Fluidos</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Gravitação Universal</h4>
+    <div class="formula">$F_g = G\dfrac{m_1 m_2}{r^2}$ &nbsp;|&nbsp; $\vec{g} = -G\dfrac{M}{r^2}\hat{r}$</div>
+    <div class="formula">$U_g = -G\dfrac{m_1 m_2}{r}$ &nbsp;|&nbsp; $V_g = -G\dfrac{M}{r}$</div>
+    <div class="formula">Velocidade orbital: $v = \sqrt{\dfrac{GM}{r}}$</div>
+    <div class="formula">Velocidade de escape: $v_{esc} = \sqrt{\dfrac{2GM}{r}}$</div>
+  </div>
+  <div class="card">
+    <h4>Fluidos & Hidrostática</h4>
+    <div class="formula">Pressão: $P = \dfrac{F}{A}$ &nbsp;|&nbsp; $P = P_0 + \rho gh$</div>
+    <div class="formula">Empuxo: $B = \rho g V_{deslocado}$</div>
+    <div class="formula">Continuidade: $A_1 v_1 = A_2 v_2$</div>
+    <div class="formula">Bernoulli: $P_1 + \rho gy_1 + \frac{1}{2}\rho v_1^2 = P_2 + \rho gy_2 + \frac{1}{2}\rho v_2^2$</div>
+    <div class="formula">Arrasto: $R = \frac{1}{2}\rho C A v^2$</div>
+  </div>
+  <div class="card">
+    <h4>MHS & Pêndulo</h4>
+    <div class="formula">MHS: $x(t) = A\cos(\omega t + \varphi_0)$</div>
+    <div class="formula">$v(t) = -\omega A\sin(\omega t + \varphi_0)$</div>
+    <div class="formula">$a(t) = -\omega^2 A\cos(\omega t + \varphi_0)$</div>
+    <div class="formula">Período mola: $T = 2\pi\sqrt{\dfrac{m}{k}}$</div>
+    <div class="formula">Pêndulo simples: $T = 2\pi\sqrt{\dfrac{\ell}{g}}$</div>
+    <div class="note">$\omega = 2\pi f = \sqrt{k/m}$</div>
+  </div>
+</div>
+
+<!-- TERMODINÂMICA -->
+<h2>🌡️ Termodinâmica</h2>
+<div class="grid">
+  <div class="card">
+    <h4>Calor & Temperatura</h4>
+    <div class="formula">Dilatação linear: $\Delta\ell = \alpha\ell_0\Delta T$</div>
+    <div class="formula">Calor sensível: $Q = mc\Delta T$</div>
+    <div class="formula">Calor latente: $Q = mL$</div>
+    <div class="formula">Condução: $P = \dfrac{kA\Delta T}{\ell}$</div>
+  </div>
+  <div class="card">
+    <h4>Gases & Leis Termodinâmicas</h4>
+    <div class="formula">Gás ideal: $PV = nRT = NkT$</div>
+    <div class="formula">Energia interna: $\Delta U = \frac{3}{2}nR\Delta T = \frac{3}{2}Nk\Delta T$</div>
+    <div class="formula">1ª Lei: $\Delta U = Q + W$</div>
+    <div class="formula">Trabalho: $W = -\displaystyle\int P\,dV$</div>
+    <div class="formula">Entropia: $\Delta S = \dfrac{\Delta Q}{T}$ &nbsp;|&nbsp; $S = k\ln W$</div>
+  </div>
+  <div class="card">
+    <h4>Máquinas Térmicas</h4>
+    <div class="formula">Eficiência real: $\eta = 1 - \dfrac{Q_C}{Q_H}$</div>
+    <div class="formula">Eficiência Carnot: $\eta_{ideal} = 1 - \dfrac{T_C}{T_H}$</div>
+    <div class="formula">COP (refrigerador): $COP = \dfrac{Q_C}{Q_H - Q_C}$</div>
+    <div class="formula">Stefan-Boltzmann: $P = \varepsilon\sigma A(T^4 - T_0^4)$</div>
+    <div class="formula">Wien: $\lambda_{max} = \dfrac{b}{T}$</div>
+  </div>
+</div>
+
+<!-- ONDAS & ÓPTICA -->
+<h2>🌊 Ondas & Óptica</h2>
+<div class="grid">
+  <div class="card">
+    <h4>Ondas Mecânicas</h4>
+    <div class="formula">Função de onda: $y = A\cos\left[2\pi\left(\dfrac{t}{T} - \dfrac{x}{\lambda}\right) + \varphi\right]$</div>
+    <div class="formula">$v = \lambda f = \dfrac{\lambda}{T}$</div>
+    <div class="formula">Corda tensionada: $v = \sqrt{\dfrac{T}{\mu}}$ &nbsp;|&nbsp; $\mu = \dfrac{m}{L}$</div>
+    <div class="formula">Batimento: $f_{beat} = |f_1 - f_2|$</div>
+    <div class="formula">Intensidade sonora: $L_I = 10\log\left(\dfrac{I}{I_0}\right)$ dB</div>
+  </div>
+  <div class="card">
+    <h4>Óptica Geométrica</h4>
+    <div class="formula">Espelhos/Lentes: $\dfrac{1}{f} = \dfrac{1}{p} + \dfrac{1}{p'}$</div>
+    <div class="formula">Aumento: $M = \dfrac{h_i}{h_o} = -\dfrac{p'}{p}$</div>
+    <div class="formula">Espelho esférico: $f \approx \dfrac{R}{2}$</div>
+    <div class="formula">Índice de refração: $n = \dfrac{c}{v}$</div>
+    <div class="formula">Snell: $n_1\sin\theta_1 = n_2\sin\theta_2$</div>
+    <div class="formula">Ângulo crítico: $\sin\theta_c = \dfrac{n_2}{n_1}$</div>
+  </div>
+  <div class="card">
+    <h4>Interferência & Difração</h4>
+    <div class="formula">Fendas duplas: $n\lambda = d\sin\theta \approx \dfrac{dx}{L}$</div>
+    <div class="formula">Efeito Doppler: $\dfrac{f_o}{f_s} = \dfrac{c \pm v_o}{c \mp v_s}$</div>
+    <div class="formula">Aproximação: $\dfrac{\Delta f}{f} \approx \dfrac{\Delta v}{c}$</div>
+    <div class="formula">Ângulo de Mach: $\sin\mu = \dfrac{c}{v}$</div>
+  </div>
+</div>
+
+<!-- ELETROMAGNETISMO -->
+<h2>⚡ Eletricidade & Magnetismo</h2>
+
+<h3>Eletrostática</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Cargas & Campo Elétrico</h4>
+    <div class="formula">Quantização: $Q = ne$ &nbsp;|&nbsp; $e \approx 1,602\times10^{-19}\,\text{C}$</div>
+    <div class="formula">Coulomb: $F = k\dfrac{|q_1 q_2|}{r^2} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{|q_1 q_2|}{r^2}$</div>
+    <div class="formula">Campo elétrico: $\vec{E} = \dfrac{\vec{F}}{q}$ &nbsp;|&nbsp; $E = k\dfrac{|Q|}{r^2}$</div>
+    <div class="formula">Potencial: $V = k\dfrac{Q}{r}$ &nbsp;|&nbsp; $\Delta V = -\displaystyle\int \vec{E}\cdot d\vec{r}$</div>
+    <div class="formula">Relação campo-potencial: $\vec{E} = -\nabla V$</div>
+  </div>
+  <div class="card">
+    <h4>Capacitores & Energia</h4>
+    <div class="formula">Capacitância: $C = \dfrac{Q}{V}$</div>
+    <div class="formula">Placas paralelas: $C = \dfrac{\kappa\varepsilon_0 A}{d}$</div>
+    <div class="formula">Energia armazenada: $U_C = \dfrac{1}{2}QV = \dfrac{1}{2}CV^2 = \dfrac{Q^2}{2C}$</div>
+    <div class="formula">Série: $\dfrac{1}{C_{eq}} = \sum\dfrac{1}{C_i}$ &nbsp;|&nbsp; Paralelo: $C_{eq} = \sum C_i$</div>
+  </div>
+</div>
+
+<h3>Circuitos Elétricos</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Corrente, Resistência & Potência</h4>
+    <div class="formula">Corrente: $I = \dfrac{\Delta q}{\Delta t} = \dfrac{dq}{dt}$</div>
+    <div class="formula">Lei de Ohm: $V = IR$ &nbsp;|&nbsp; $\vec{E} = \rho\vec{J}$ &nbsp;|&nbsp; $\vec{J} = \sigma\vec{E}$</div>
+    <div class="formula">Resistência: $R = \rho\dfrac{L}{A}$ &nbsp;|&nbsp; $\sigma = \dfrac{1}{\rho}$</div>
+    <div class="formula">Potência: $P = VI = I^2R = \dfrac{V^2}{R}$</div>
+    <div class="formula">Joule: $E_{diss} = I^2 R t$</div>
+  </div>
+  <div class="card">
+    <h4>Associações & Leis de Kirchhoff</h4>
+    <div class="formula">Resistores série: $R_{eq} = \sum R_i$ &nbsp;|&nbsp; Paralelo: $\dfrac{1}{R_{eq}} = \sum\dfrac{1}{R_i}$</div>
+    <div class="formula">Lei dos nós: $\sum I_{entra} = \sum I_{sai}$</div>
+    <div class="formula">Lei das malhas: $\sum \Delta V = 0$</div>
+    <div class="formula">Pouillet: $I = \dfrac{\varepsilon - \varepsilon'}{r + r' + R_{eq}}$</div>
+  </div>
+</div>
+
+<h3>🧲 Magnetismo (Ampliado)</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Força Magnética</h4>
+    <div class="formula">Sobre carga: $\vec{F}_B = q(\vec{v}\times\vec{B})$ &nbsp;⇒&nbsp; $F = |q|vB\sin\theta$</div>
+    <div class="formula">Sobre fio: $\vec{F}_B = I(\vec{L}\times\vec{B})$ &nbsp;⇒&nbsp; $F = BIL\sin\theta$</div>
+    <div class="formula">Elementar: $d\vec{F}_B = I\,d\vec{\ell}\times\vec{B}$</div>
+    <div class="formula">Força de Lorentz: $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$</div>
+    <div class="note">Regra da mão direita para sentido da força</div>
+  </div>
+  <div class="card">
+    <h4>Campo Magnético de Condutores</h4>
+    <div class="formula">Fio reto longo: $B = \dfrac{\mu_0 I}{2\pi r}$</div>
+    <div class="formula">Centro de espira: $B = \dfrac{\mu_0 I}{2R}$</div>
+    <div class="formula">Solenoide: $B = \mu_0 n I$ &nbsp;($n = N/L$)</div>
+    <div class="formula">Lei de Biot-Savart: $\vec{B} = \dfrac{\mu_0 I}{4\pi}\displaystyle\int \dfrac{d\vec{s}\times\hat{r}}{r^2}$</div>
+    <div class="constants">$\mu_0 = 4\pi\times10^{-7}\,\text{T·m/A}$ (permeabilidade do vácuo)</div>
+  </div>
+  <div class="card">
+    <h4>Fluxo, Indução & Circuitos CA</h4>
+    <div class="formula">Fluxo magnético: $\Phi_B = \displaystyle\int \vec{B}\cdot d\vec{A} = BA\cos\theta$</div>
+    <div class="formula">Lei de Faraday: $\mathcal{E} = -\dfrac{d\Phi_B}{dt}$</div>
+    <div class="formula">Lei de Lenz: sentido da corrente se opõe à variação do fluxo</div>
+    <div class="formula">Indutância: $\mathcal{E} = -L\dfrac{dI}{dt}$</div>
+    <div class="formula">Reatâncias: $X_C = \dfrac{1}{2\pi f C}$ &nbsp;|&nbsp; $X_L = 2\pi f L$</div>
+    <div class="formula">Impedância: $Z = \sqrt{R^2 + (X_L - X_C)^2}$</div>
+  </div>
+</div>
+
+<h3>Equações de Maxwell (Forma Integral)</h3>
+<div class="card">
+  <div class="formula display">🔹 Gauss (elétrica): $\displaystyle\oint \vec{E}\cdot d\vec{A} = \dfrac{Q_{int}}{\varepsilon_0}$</div>
+  <div class="formula display">🔹 Gauss (magnética): $\displaystyle\oint \vec{B}\cdot d\vec{A} = 0$</div>
+  <div class="formula display">🔹 Faraday: $\displaystyle\oint \vec{E}\cdot d\vec{s} = -\dfrac{d\Phi_B}{dt}$</div>
+  <div class="formula display">🔹 Ampère-Maxwell: $\displaystyle\oint \vec{B}\cdot d\vec{s} = \mu_0 I + \mu_0\varepsilon_0\dfrac{d\Phi_E}{dt}$</div>
+  <div class="note">Formam a base do eletromagnetismo clássico e preveem ondas eletromagnéticas</div>
+</div>
+
+<h3>Ondas Eletromagnéticas</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Propagação & Energia</h4>
+    <div class="formula">Onda plana: $\vec{E}(x,t) = E_0\sin\left[2\pi\left(ft - \dfrac{x}{\lambda}\right) + \varphi\right]\hat{j}$</div>
+    <div class="formula">$\vec{B}(x,t) = B_0\sin\left[2\pi\left(ft - \dfrac{x}{\lambda}\right) + \varphi\right]\hat{k}$</div>
+    <div class="formula">Relação amplitudes: $E_0 = cB_0$</div>
+    <div class="formula">Velocidade: $c = \dfrac{1}{\sqrt{\mu_0\varepsilon_0}} \approx 3\times10^8\,\text{m/s}$</div>
+  </div>
+  <div class="card">
+    <h4>Energia & Pressão de Radiação</h4>
+    <div class="formula">Densidade de energia: $u = \varepsilon_0 E^2 = \dfrac{B^2}{\mu_0}$</div>
+    <div class="formula">Vetor de Poynting: $\vec{S} = \dfrac{1}{\mu_0}(\vec{E}\times\vec{B})$</div>
+    <div class="formula">Intensidade média: $\langle S \rangle = \dfrac{1}{2}c\varepsilon_0 E_0^2$</div>
+    <div class="formula">Pressão de radiação: $P = \dfrac{\langle S \rangle}{c}$ (absorção total)</div>
+  </div>
+</div>
+
+<!-- FÍSICA MODERNA -->
+<h2>⚛️ Física Moderna</h2>
+
+<h3>Relatividade Restrita</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Fator de Lorentz & Cinemática Relativística</h4>
+    <div class="formula">Fator de Lorentz: $\gamma = \dfrac{1}{\sqrt{1 - v^2/c^2}}$</div>
+    <div class="formula">Dilatação do tempo: $\Delta t = \gamma\Delta t_0$</div>
+    <div class="formula">Contração do comprimento: $L = \dfrac{L_0}{\gamma}$</div>
+    <div class="formula">Adição de velocidades: $u' = \dfrac{u + v}{1 + uv/c^2}$</div>
+  </div>
+  <div class="card">
+    <h4>Energia & Momento Relativísticos</h4>
+    <div class="formula">Energia total: $E = \gamma mc^2$</div>
+    <div class="formula">Momento: $\vec{p} = \gamma m\vec{v}$</div>
+    <div class="formula">Relação energia-momento: $E^2 = (pc)^2 + (mc^2)^2$</div>
+    <div class="formula">Energia de repouso: $E_0 = mc^2$</div>
+    <div class="formula">Energia cinética: $K = (\gamma - 1)mc^2$</div>
+  </div>
+</div>
+
+<h3>⚛️ Mecânica Quântica (Ampliada)</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Dualidade Onda-Partícula</h4>
+    <div class="formula">Energia do fóton: $E = hf = \dfrac{hc}{\lambda} = pc$</div>
+    <div class="formula">Momento do fóton: $p = \dfrac{h}{\lambda} = \dfrac{E}{c}$</div>
+    <div class="formula">Comprimento de de Broglie: $\lambda = \dfrac{h}{p} = \dfrac{h}{mv}$</div>
+    <div class="constants">$h \approx 6,626\times10^{-34}\,\text{J·s}$ &nbsp;|&nbsp; $\hbar = \dfrac{h}{2\pi} \approx 1,055\times10^{-34}\,\text{J·s}$</div>
+  </div>
+  <div class="card">
+    <h4>Efeito Fotoelétrico & Princípio de Incerteza</h4>
+    <div class="formula">$K_{max} = hf - \phi = h(f - f_0)$</div>
+    <div class="formula">Função trabalho: $\phi = hf_0$</div>
+    <div class="formula">Heisenberg (posição-momento): $\Delta x\,\Delta p_x \geq \dfrac{\hbar}{2}$</div>
+    <div class="formula">Heisenberg (energia-tempo): $\Delta E\,\Delta t \geq \dfrac{\hbar}{2}$</div>
+  </div>
+  <div class="card">
+    <h4>Equação de Schrödinger & Átomo de Hidrogênio</h4>
+    <div class="formula">Dependente do tempo: $i\hbar\dfrac{\partial\Psi}{\partial t} = -\dfrac{\hbar^2}{2m}\nabla^2\Psi + U(\vec{r})\Psi$</div>
+    <div class="formula">Independente do tempo (1D): $-\dfrac{\hbar^2}{2m}\dfrac{d^2\psi}{dx^2} + U(x)\psi = E\psi$</div>
+    <div class="formula">Níveis de energia (Bohr): $E_n = -\dfrac{13,6\,\text{eV}}{n^2}$</div>
+    <div class="formula">Transições: $\Delta E = |E_f - E_i| = hf = \dfrac{hc}{\lambda}$</div>
+    <div class="formula">Rydberg: $\dfrac{1}{\lambda} = R_\infty\left(\dfrac{1}{n_1^2} - \dfrac{1}{n_2^2}\right)$</div>
+  </div>
+</div>
+
+<h3>Física Nuclear & Radioatividade</h3>
+<div class="grid">
+  <div class="card">
+    <h4>Decaimento Radioativo</h4>
+    <div class="formula">Lei de decaimento: $N(t) = N_0 e^{-\lambda t} = N_0 \cdot 2^{-t/T_{1/2}}$</div>
+    <div class="formula">Meia-vida: $T_{1/2} = \dfrac{\ln 2}{\lambda} \approx \dfrac{0,693}{\lambda}$</div>
+    <div class="formula">Atividade: $A = \left|\dfrac{dN}{dt}\right| = \lambda N$</div>
+    <div class="note">Unidade SI: becquerel (Bq) = 1 decaimento/s</div>
+  </div>
+  <div class="card">
+    <h4>Dose de Radiação</h4>
+    <div class="formula">Dose absorvida: $D = \dfrac{E}{m}$ &nbsp;(unidade: gray, Gy = J/kg)</div>
+    <div class="formula">Dose equivalente: $H = w_R \cdot D$ &nbsp;(unidade: sievert, Sv)</div>
+    <div class="formula">Dose efetiva: $E = \sum w_T \cdot H_T$</div>
+    <div class="note">$w_R$: fator de ponderação da radiação; $w_T$: fator de tecido</div>
+  </div>
+</div>
+
+<!-- CONSTANTES FÍSICAS -->
+<h2>🔢 Constantes Fundamentais</h2>
+<div class="card">
+  <div class="grid">
+    <div>
+      <div class="formula">$c = 2,99792458\times10^8\,\text{m/s}$ (velocidade da luz)</div>
+      <div class="formula">$G = 6,67430\times10^{-11}\,\text{N·m}^2/\text{kg}^2$ (gravitação)</div>
+      <div class="formula">$h = 6,62607015\times10^{-34}\,\text{J·s}$ (Planck)</div>
+      <div class="formula">$\hbar = h/2\pi \approx 1,0545718\times10^{-34}\,\text{J·s}$</div>
+    </div>
+    <div>
+      <div class="formula">$e = 1,602176634\times10^{-19}\,\text{C}$ (carga elementar)</div>
+      <div class="formula">$\varepsilon_0 = 8,8541878128\times10^{-12}\,\text{F/m}$ (permissividade)</div>
+      <div class="formula">$\mu_0 = 4\pi\times10^{-7}\,\text{T·m/A}$ (permeabilidade)</div>
+      <div class="formula">$k_B = 1,380649\times10^{-23}\,\text{J/K}$ (Boltzmann)</div>
+    </div>
+    <div>
+      <div class="formula">$N_A = 6,02214076\times10^{23}\,\text{mol}^{-1}$ (Avogadro)</div>
+      <div class="formula">$R = 8,314462618\,\text{J/(mol·K)}$ (gases)</div>
+      <div class="formula">$m_e = 9,1093837015\times10^{-31}\,\text{kg}$ (elétron)</div>
+      <div class="formula">$m_p = 1,67262192369\times10^{-27}\,\text{kg}$ (próton)</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>📚 Formulário atualizado em 2026 · Renderizado com <strong>MathJax 3</strong> · Fontes: physics.info + conteúdo original</p>
+  <p style="margin-top:8px; font-size:0.9rem">Uso educacional permitido · Verifique sempre as unidades e condições de aplicação de cada fórmula</p>
+</footer>
+
+</body>
+</html>
